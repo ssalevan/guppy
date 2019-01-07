@@ -5,10 +5,14 @@ matrix:
     - sudo: required
       services:
         - docker
-      env: PIP=pip
+      env: 
+        - PIP=pip
+        - CIBW_BUILD=cp27
     - os: osx
       language: generic
-      env: PIP=pip2
+      env:
+        - PIP=pip2
+        - CIBW_BUILD=cp27
 
 script:
   - $PIP install cibuildwheel==0.10.0
