@@ -1,9 +1,10 @@
 import os
+import setuptools
 
 from distutils.command.install import INSTALL_SCHEMES
 
 for scheme in INSTALL_SCHEMES.values():
-    scheme['data'] = scheme['purelib'] 
+    scheme['data'] = scheme['purelib']
 
 from distutils.core import setup, Extension
 
@@ -53,7 +54,7 @@ heapy
        about the objects in the heap and display the information
        in various ways.
 
-sets 
+sets
        Bitsets and 'nodesets' implemented in C.
 """,
           author="Sverker Nilsson",
